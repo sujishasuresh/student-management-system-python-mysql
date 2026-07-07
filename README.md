@@ -30,6 +30,23 @@ The **Student Management System** is a console-based application developed using
 * **IDE:** Visual Studio Code
 
 ---
+## Database Setup
+
+Before running the application:
+
+1. Create a MySQL database named `student_management`.
+2. Execute the `schema.sql` file to create the required table.
+3. Update the database credentials in `database.py`.
+
+```python
+conn = pymysql.connect(
+    host="localhost",
+    user="root",
+    password="YOUR_PASSWORD",
+    database="student_management",
+    cursorclass=pymysql.cursors.DictCursor
+)
+```
 
 ## Project Structure
 
@@ -53,6 +70,7 @@ student-management-system/
 ├── schema.sql
 ├── .gitignore
 └── README.md
+
 ```
 
 ---
@@ -99,4 +117,6 @@ Email      : taylor20@gmail.com
 * Graphical User Interface (GUI)
 * Role-based authentication with multiple user levels
 
+## Learning Objectives
 
+This project was developed to strengthen practical skills in Python, MySQL, CRUD operations, modular programming, and database connectivity.
